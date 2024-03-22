@@ -46,7 +46,7 @@ begin
                         ROM_qsin_addr <= std_logic_vector(to_unsigned(addr_cnt,12));    -- Assignation of the adress
                         sample_cnt <= sample_cnt + 1;
                         sample_output <= ROM_qsin_sample_i & "0000000000000000";
-                        if note_sample_count_i = std_logic_vector(to_unsigned(sample_cnt, 8)) then 
+                        if note_sample_count_i = std_logic_vector(to_unsigned(sample_cnt+2, 8)) then -- +2 because sample_cnt was stopping at 86 (decimal)
                             current_state <=  decrement_pos;
                         end if;
                     end if;
@@ -59,7 +59,7 @@ begin
                         ROM_qsin_addr <= std_logic_vector(to_unsigned(addr_cnt,12));
                         sample_cnt <= sample_cnt - 1;
                         sample_output <= ROM_qsin_sample_i & "0000000000000000";
-                        if std_logic_vector(to_unsigned(sample_cnt, 8)) = "00000000" then 
+                        if sample_cnt = 1 then 
                             current_state <=  increment_neg;
                         end if;
                     end if;
@@ -73,8 +73,8 @@ begin
                         sample_cnt <= sample_cnt + 1;
                         --sample_output <= (NOT(ROM_qsin_sample_i)) & "0000000000000000"; 
                         --std_logic_vector(to_unsigned(to_integer(unsigned( NOT(ROM_qsin_sample_i) )) + 1, 12)); -- ADD 1 TO std_logic_vector
-                        sample_output <= std_logic_vector(to_unsigned(to_integer(unsigned( NOT(ROM_qsin_sample_i) )) + 1, 8)) & "0000000000000000";
-                        if note_sample_count_i = std_logic_vector(to_unsigned(sample_cnt, 8)) then 
+                        sample_output <= std_logic_vector(to_unsigned(to_integer(unsigned( NOT(ROM_qsin_sample_i) )) + 1, 8)) & "0000000000000000"; -- Invert vector, add 1 to vector, and LSL 12
+                        if note_sample_count_i = std_logic_vector(to_unsigned(sample_cnt+2, 8)) then -- +2 because sample_cnt was stopping at 86 (decimal)
                             current_state <=  decrement_neg;
                         end if;
                     end if;
@@ -87,7 +87,7 @@ begin
                         ROM_qsin_addr <= std_logic_vector(to_unsigned(addr_cnt,12));
                         sample_cnt <= sample_cnt - 1;
                         sample_output <= std_logic_vector(to_unsigned(to_integer(unsigned( NOT(ROM_qsin_sample_i) )) + 1, 8)) & "0000000000000000";
-                        if note_sample_count_i = std_logic_vector(to_unsigned(sample_cnt, 8)) then 
+                        if sample_cnt = 1 then 
                             current_state <=  increment_pos;
                         end if;
                     end if;
@@ -95,6 +95,7 @@ begin
                 when stop =>
                     if enable_i = '1' then 
                         current_state <= increment_pos;
+                        ROM_qsin_addr <= note_start_addr_i;
                     end if;
                 
            end case;

@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/samue/polymtl.ca/H24 - General/3311 - lab 3/labo_3/labo_3_squelette/sim/top_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'top_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/samue/polymtl.ca/H24 - General/3311 - lab 3/labo_3/labo_3_squelette/hdl/generateur_sample.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'generateur_sample'

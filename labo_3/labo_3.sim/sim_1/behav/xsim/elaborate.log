@@ -1,70 +1,7 @@
 Vivado Simulator 2019.1
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 67224ac73eb64825b2dd07369885f6ae --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 67224ac73eb64825b2dd07369885f6ae --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot generateur_sample_tb_behav xil_defaultlib.generateur_sample_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-2861] module 'IBUF' does not have a parameter named CCIO_EN [C:/Users/samue/polymtl.ca/H24 - General/3311 - lab 3/labo_3/labo_3_squelette/sim/controleur_CODEC_funcsim.v:1008]
-WARNING: [VRFC 10-2861] module 'IBUF' does not have a parameter named CCIO_EN [C:/Users/samue/polymtl.ca/H24 - General/3311 - lab 3/labo_3/labo_3_squelette/sim/controleur_CODEC_funcsim.v:1016]
-WARNING: [VRFC 10-2861] module 'IBUF' does not have a parameter named CCIO_EN [C:/Users/samue/polymtl.ca/H24 - General/3311 - lab 3/labo_3/labo_3_squelette/sim/controleur_CODEC_funcsim.v:1021]
-WARNING: [VRFC 10-2861] module 'IBUF' does not have a parameter named CCIO_EN [C:/Users/samue/polymtl.ca/H24 - General/3311 - lab 3/labo_3/labo_3_squelette/sim/controleur_CODEC_funcsim.v:1026]
-WARNING: [VRFC 10-2861] module 'IBUF' does not have a parameter named CCIO_EN [C:/Users/samue/polymtl.ca/H24 - General/3311 - lab 3/labo_3/labo_3_squelette/sim/controleur_CODEC_funcsim.v:1034]
-WARNING: [VRFC 10-2861] module 'IBUF' does not have a parameter named CCIO_EN [C:/Users/samue/polymtl.ca/H24 - General/3311 - lab 3/labo_3/labo_3_squelette/sim/controleur_OLED_funcsim.v:2741]
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package vl.vl_types
-Compiling module xil_defaultlib.glbl
-Compiling architecture behavioral of entity xil_defaultlib.modulateur_volume [modulateur_volume_default]
-Compiling architecture behavioral of entity xil_defaultlib.ROM_qsin [rom_qsin_default]
-Compiling architecture behavioral of entity xil_defaultlib.ROM_jingle [rom_jingle_default]
-Compiling architecture behavioral of entity xil_defaultlib.MSA_jingle [msa_jingle_default]
-Compiling architecture behavioral of entity xil_defaultlib.generateur_sample [generateur_sample_default]
-Compiling architecture behavioral of entity xil_defaultlib.MSA_timing [msa_timing_default]
-Compiling module unisims_ver.IBUF
-Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=14,CLKIN...
-Compiling module unisims_ver.BUFG
-Compiling module xil_defaultlib.clk_wiz_clk_wiz
-Compiling module xil_defaultlib.clk_wiz
-Compiling module unisims_ver.OBUF
-Compiling module unisims_ver.IOBUF
-Compiling module unisims_ver.OBUFT
-Compiling module unisims_ver.FDRE_default
-Compiling module unisims_ver.x_lut3_mux8
-Compiling module unisims_ver.LUT3
-Compiling module unisims_ver.FDCE_default
-Compiling module unisims_ver.x_lut1_mux2
-Compiling module unisims_ver.LUT1
-Compiling module unisims_ver.x_lut2_mux4
-Compiling module unisims_ver.LUT2
-Compiling module unisims_ver.LUT4
-Compiling module unisims_ver.LUT5
-Compiling module unisims_ver.LUT6
-Compiling module unisims_ver.MUXF7
-Compiling module xil_defaultlib.adau1761_cmd_ROM
-Compiling module unisims_ver.FDPE_default
-Compiling module xil_defaultlib.i2c_master
-Compiling module xil_defaultlib.adau1761_config
-Compiling module xil_defaultlib.i2s_serial
-Compiling module unisims_ver.ODDR
-Compiling module xil_defaultlib.oddr_0_oddr_v1_0_2_oddr
-Compiling module xil_defaultlib.oddr_0
-Compiling module unisims_ver.CARRY4
-Compiling module xil_defaultlib.controleur_CODEC
-Compiling module unisims_ver.FDPE_default_1
-Compiling module unisims_ver.FDCE_default_1
-Compiling module xil_defaultlib.MSA_SPI
-Compiling module xil_defaultlib.MSA_Affichage
-Compiling module xil_defaultlib.MSA_init
-Compiling module unisims_ver.FDRE_default_1
-Compiling module xil_defaultlib.MSA_timing
-Compiling module xil_defaultlib.oled_cmd_ROM
-Compiling module xil_defaultlib.controleur_OLED
-Compiling architecture arch_antirebond of entity xil_defaultlib.antirebond [antirebond_default]
-Compiling architecture behavioral of entity xil_defaultlib.top [top_default]
-Compiling architecture arch_top_tb of entity xil_defaultlib.top_tb
-Built simulation snapshot top_tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

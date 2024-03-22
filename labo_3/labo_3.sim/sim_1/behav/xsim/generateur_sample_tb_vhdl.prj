@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../labo_3_squelette/hdl/ROM_qsin.vhd" \
+"../../../../../labo_3_squelette/hdl/generateur_sample.vhd" \
+"../../../../labo_3.srcs/sim_1/new/generateur_sample_tb.vhd" \
+
+# Do not sort compile order
+nosort
