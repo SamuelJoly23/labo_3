@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../labo_3_squelette/hdl/MSA_jingle.vhd" \
+"../../../../../labo_3_squelette/hdl/MSA_timing.vhd" \
+"../../../../../labo_3_squelette/hdl/ROM_jingle.vhd" \
+"../../../../../labo_3_squelette/hdl/ROM_qsin.vhd" \
+"../../../../../labo_3_squelette/hdl/antirebond.vhd" \
+"../../../../../labo_3_squelette/hdl/generateur_sample.vhd" \
+"../../../../../labo_3_squelette/hdl/modulateur_volume.vhd" \
+"../../../../../labo_3_squelette/hdl/top.vhd" \
+"../../../../../labo_3_squelette/sim/top_tb.vhd" \
+
+# Do not sort compile order
+nosort

@@ -24,6 +24,8 @@ architecture Behavioral of generateur_sample is
     signal sample_cnt       : integer := 0;
     signal addr_cnt         : integer := 0;
 begin
+    ROM_qsin_addr_o <= ROM_qsin_addr; 
+    sample_out      <= sample_output;
     process (clk_i, rst_i)
     begin
 -- A remplacer
@@ -40,8 +42,8 @@ begin
                     if enable_i = '0' then
                         current_state <= stop;
                     elsif sample_ready_i = '1' and enable_i = '1' then 
-                        addr_cnt <= to_integer(signed(note_start_addr_i)) + sample_cnt;
-                        ROM_qsin_addr <= std_logic_vector(to_unsigned(addr_cnt,12));
+                        addr_cnt <= to_integer(signed(note_start_addr_i)) + sample_cnt; -- Adress of the generated sample
+                        ROM_qsin_addr <= std_logic_vector(to_unsigned(addr_cnt,12));    -- Assignation of the adress
                         sample_cnt <= sample_cnt + 1;
                         sample_output <= ROM_qsin_sample_i & "0000000000000000";
                         if note_sample_count_i = std_logic_vector(to_unsigned(sample_cnt, 8)) then 
@@ -98,8 +100,4 @@ begin
            end case;
         end if;
     end process; 
-    
-    -- SHOULD BE AT THE BEGINNING ???
-    ROM_qsin_addr_o <= ROM_qsin_addr; 
-    sample_out      <= sample_output;
 end Behavioral;
