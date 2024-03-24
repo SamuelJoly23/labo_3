@@ -36,6 +36,7 @@ architecture arch_top_tb of top_tb is
 
 -- Clock period definitions
   constant CLK_100MHZ_PERIOD : time := 10 ns;
+  
 
 begin
 
@@ -65,17 +66,20 @@ begin
   clk_100mhz_i <= not clk_100mhz_i after CLK_100MHZ_PERIOD/2;
   codec_bclk   <= not codec_bclk   after 50 ns;  -- Not to scale for sim, actual bclk will be slower
   codec_lrclk  <= not codec_lrclk  after 3200 ns;
-
+  
   -- Stimulus process
   stim_proc : process
   begin
-    rst_n_i <= '0';
-    wait for 100 ns;
     rst_n_i <= '1';
-
+    wait for 1000 ns;
+    rst_n_i <= '0';
+    wait for 1 us;
+    btnd <= '1';
+    wait for 30 ns;
+    btnd <= '0';
     -- A completer
 
-    wait;                               -- wait forever
+    --wait;                               -- wait forever
   end process;
 
 end arch_top_tb;
