@@ -96,6 +96,7 @@ begin
                     if enable_i = '1' then 
                         current_state <= increment_pos;
                         ROM_qsin_addr <= note_start_addr_i;
+                        sample_cnt    <= 0; -- remettre le compteur a 0
                     end if;
                 
            end case;

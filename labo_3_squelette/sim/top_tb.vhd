@@ -19,6 +19,7 @@ architecture arch_top_tb of top_tb is
           codec_lrclk_i     : in    std_logic;
           btnd_i            : in    std_logic;
           btnu_i            : in    std_logic;
+          btnr_i            : in    std_logic;
           oled_dc_n_o       : out   std_logic;
           oled_res_n_o      : out   std_logic;
           oled_sclk_o       : out   std_logic;
@@ -32,7 +33,7 @@ architecture arch_top_tb of top_tb is
   signal oled_dc_n, oled_res_n, oled_sclk, oled_sdo, oled_vbat_n, oled_vdd_n : std_logic;
   signal codec_scl, codec_sda, codec_mclk, codec_dac_sdata                   : std_logic;
   signal codec_bclk, codec_lrclk, codec_adc_sdata                            : std_logic := '0';
-  signal btnd, btnu                                                          : std_logic := '0';
+  signal btnd, btnu, btnr                                                    : std_logic := '0';
 
 -- Clock period definitions
   constant CLK_100MHZ_PERIOD : time := 10 ns;
@@ -54,6 +55,7 @@ begin
       codec_lrclk_i     => codec_lrclk,
       btnu_i            => btnu,
       btnd_i            => btnd,
+      btnr_i            => btnr,
       oled_dc_n_o       => oled_dc_n,
       oled_res_n_o      => oled_res_n,
       oled_sclk_o       => oled_sclk,
@@ -70,16 +72,20 @@ begin
   -- Stimulus process
   stim_proc : process
   begin
-    rst_n_i <= '1';
-    wait for 1000 ns;
     rst_n_i <= '0';
+    wait for 1000 ns;
+    rst_n_i <= '1';
     wait for 1 us;
+    btnd <= '1';
+    wait for 30 ns;
+    btnd <= '0';
+    wait for 4 ms;
     btnd <= '1';
     wait for 30 ns;
     btnd <= '0';
     -- A completer
 
-    --wait;                               -- wait forever
+    wait;                               -- wait forever
   end process;
 
 end arch_top_tb;

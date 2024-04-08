@@ -1,14 +1,14 @@
 Vivado Simulator 2019.1
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 67224ac73eb64825b2dd07369885f6ae --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 67224ac73eb64825b2dd07369885f6ae --incr --debug typical --relax --mt 2 -L fifo_generator_v13_2_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-2861] module 'IBUF' does not have a parameter named CCIO_EN [C:/Users/samue/polymtl.ca/H24 - General/3311 - lab 3/labo_3/labo_3_squelette/sim/controleur_CODEC_funcsim.v:1008]
-WARNING: [VRFC 10-2861] module 'IBUF' does not have a parameter named CCIO_EN [C:/Users/samue/polymtl.ca/H24 - General/3311 - lab 3/labo_3/labo_3_squelette/sim/controleur_CODEC_funcsim.v:1016]
-WARNING: [VRFC 10-2861] module 'IBUF' does not have a parameter named CCIO_EN [C:/Users/samue/polymtl.ca/H24 - General/3311 - lab 3/labo_3/labo_3_squelette/sim/controleur_CODEC_funcsim.v:1021]
-WARNING: [VRFC 10-2861] module 'IBUF' does not have a parameter named CCIO_EN [C:/Users/samue/polymtl.ca/H24 - General/3311 - lab 3/labo_3/labo_3_squelette/sim/controleur_CODEC_funcsim.v:1026]
-WARNING: [VRFC 10-2861] module 'IBUF' does not have a parameter named CCIO_EN [C:/Users/samue/polymtl.ca/H24 - General/3311 - lab 3/labo_3/labo_3_squelette/sim/controleur_CODEC_funcsim.v:1034]
-WARNING: [VRFC 10-2861] module 'IBUF' does not have a parameter named CCIO_EN [C:/Users/samue/polymtl.ca/H24 - General/3311 - lab 3/labo_3/labo_3_squelette/sim/controleur_OLED_funcsim.v:2741]
+WARNING: [VRFC 10-2861] module 'IBUF' does not have a parameter named CCIO_EN [C:/Users/samue/polymtl.ca/H24 - General/3311 - lab 3/labo_3_v2/labo_3_squelette/sim/controleur_CODEC_funcsim.v:1008]
+WARNING: [VRFC 10-2861] module 'IBUF' does not have a parameter named CCIO_EN [C:/Users/samue/polymtl.ca/H24 - General/3311 - lab 3/labo_3_v2/labo_3_squelette/sim/controleur_CODEC_funcsim.v:1016]
+WARNING: [VRFC 10-2861] module 'IBUF' does not have a parameter named CCIO_EN [C:/Users/samue/polymtl.ca/H24 - General/3311 - lab 3/labo_3_v2/labo_3_squelette/sim/controleur_CODEC_funcsim.v:1021]
+WARNING: [VRFC 10-2861] module 'IBUF' does not have a parameter named CCIO_EN [C:/Users/samue/polymtl.ca/H24 - General/3311 - lab 3/labo_3_v2/labo_3_squelette/sim/controleur_CODEC_funcsim.v:1026]
+WARNING: [VRFC 10-2861] module 'IBUF' does not have a parameter named CCIO_EN [C:/Users/samue/polymtl.ca/H24 - General/3311 - lab 3/labo_3_v2/labo_3_squelette/sim/controleur_CODEC_funcsim.v:1034]
+WARNING: [VRFC 10-2861] module 'IBUF' does not have a parameter named CCIO_EN [C:/Users/samue/polymtl.ca/H24 - General/3311 - lab 3/labo_3_v2/labo_3_squelette/sim/controleur_OLED_funcsim.v:2741]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -65,6 +65,11 @@ Compiling module xil_defaultlib.MSA_timing
 Compiling module xil_defaultlib.oled_cmd_ROM
 Compiling module xil_defaultlib.controleur_OLED
 Compiling architecture arch_antirebond of entity xil_defaultlib.antirebond [antirebond_default]
+Compiling module fifo_generator_v13_2_4.fifo_generator_v13_2_4_bhv_ver_s...
+Compiling module fifo_generator_v13_2_4.fifo_generator_v13_2_4_CONV_VER(...
+Compiling module fifo_generator_v13_2_4.fifo_generator_vlog_beh(C_COMMON...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling architecture behavioral of entity xil_defaultlib.echo [echo_default]
 Compiling architecture behavioral of entity xil_defaultlib.top [top_default]
 Compiling architecture arch_top_tb of entity xil_defaultlib.top_tb
 Built simulation snapshot top_tb_behav

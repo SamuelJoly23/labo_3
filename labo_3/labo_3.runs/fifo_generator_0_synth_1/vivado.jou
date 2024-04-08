@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Apr  8 13:20:02 2024
+# Process ID: 19620
+# Current directory: C:/Users/samue/polymtl.ca/H24 - General/3311 - lab 3/labo_3_v2/labo_3/labo_3.runs/fifo_generator_0_synth_1
+# Command line: vivado.exe -log fifo_generator_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fifo_generator_0.tcl
+# Log file: C:/Users/samue/polymtl.ca/H24 - General/3311 - lab 3/labo_3_v2/labo_3/labo_3.runs/fifo_generator_0_synth_1/fifo_generator_0.vds
+# Journal file: C:/Users/samue/polymtl.ca/H24 - General/3311 - lab 3/labo_3_v2/labo_3/labo_3.runs/fifo_generator_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source fifo_generator_0.tcl -notrace

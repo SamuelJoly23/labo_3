@@ -1,5 +1,6 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  --include "../../../../labo_3.srcs/sources_1/ip/clk_wiz" \
+"../../../../labo_3.srcs/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v" \
 "../../../../labo_3.srcs/sources_1/ip/clk_wiz/clk_wiz_clk_wiz.v" \
 "../../../../labo_3.srcs/sources_1/ip/clk_wiz/clk_wiz.v" \
 "../../../../../labo_3_squelette/sim/controleur_CODEC_funcsim.v" \

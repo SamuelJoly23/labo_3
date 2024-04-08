@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="3183685500000fs"></ZoomStartTime>
+      <ZoomEndTime time="3183798900001fs"></ZoomEndTime>
+      <Cursor1Time time="3183780000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="184"></NameColumnWidth>
+      <ValueColumnWidth column_width="128"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="67" />
+   <wvobject fp_name="/top_tb/rst_n_i" type="logic">
+      <obj_property name="ElementShortName">rst_n_i</obj_property>
+      <obj_property name="ObjectShortName">rst_n_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/clk_100mhz_i" type="logic">
+      <obj_property name="ElementShortName">clk_100mhz_i</obj_property>
+      <obj_property name="ObjectShortName">clk_100mhz_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/oled_dc_n" type="logic">
+      <obj_property name="ElementShortName">oled_dc_n</obj_property>
+      <obj_property name="ObjectShortName">oled_dc_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/oled_res_n" type="logic">
+      <obj_property name="ElementShortName">oled_res_n</obj_property>
+      <obj_property name="ObjectShortName">oled_res_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/oled_sclk" type="logic">
+      <obj_property name="ElementShortName">oled_sclk</obj_property>
+      <obj_property name="ObjectShortName">oled_sclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/oled_sdo" type="logic">
+      <obj_property name="ElementShortName">oled_sdo</obj_property>
+      <obj_property name="ObjectShortName">oled_sdo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/oled_vbat_n" type="logic">
+      <obj_property name="ElementShortName">oled_vbat_n</obj_property>
+      <obj_property name="ObjectShortName">oled_vbat_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/oled_vdd_n" type="logic">
+      <obj_property name="ElementShortName">oled_vdd_n</obj_property>
+      <obj_property name="ObjectShortName">oled_vdd_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/codec_scl" type="logic">
+      <obj_property name="ElementShortName">codec_scl</obj_property>
+      <obj_property name="ObjectShortName">codec_scl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/codec_sda" type="logic">
+      <obj_property name="ElementShortName">codec_sda</obj_property>
+      <obj_property name="ObjectShortName">codec_sda</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/codec_mclk" type="logic">
+      <obj_property name="ElementShortName">codec_mclk</obj_property>
+      <obj_property name="ObjectShortName">codec_mclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/codec_dac_sdata" type="logic">
+      <obj_property name="ElementShortName">codec_dac_sdata</obj_property>
+      <obj_property name="ObjectShortName">codec_dac_sdata</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/codec_bclk" type="logic">
+      <obj_property name="ElementShortName">codec_bclk</obj_property>
+      <obj_property name="ObjectShortName">codec_bclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/codec_lrclk" type="logic">
+      <obj_property name="ElementShortName">codec_lrclk</obj_property>
+      <obj_property name="ObjectShortName">codec_lrclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/codec_adc_sdata" type="logic">
+      <obj_property name="ElementShortName">codec_adc_sdata</obj_property>
+      <obj_property name="ObjectShortName">codec_adc_sdata</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/btnd" type="logic">
+      <obj_property name="ElementShortName">btnd</obj_property>
+      <obj_property name="ObjectShortName">btnd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/btnu" type="logic">
+      <obj_property name="ElementShortName">btnu</obj_property>
+      <obj_property name="ObjectShortName">btnu</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/CLK_100MHZ_PERIOD" type="other">
+      <obj_property name="ElementShortName">CLK_100MHZ_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">CLK_100MHZ_PERIOD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/inst_ROM_jingle/clk_i" type="logic">
+      <obj_property name="ElementShortName">clk_i</obj_property>
+      <obj_property name="ObjectShortName">clk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/inst_ROM_jingle/addr_i" type="array">
+      <obj_property name="ElementShortName">addr_i[7:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_i[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/inst_ROM_jingle/note_duration_o" type="array">
+      <obj_property name="ElementShortName">note_duration_o[15:0]</obj_property>
+      <obj_property name="ObjectShortName">note_duration_o[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/inst_ROM_jingle/note_start_address_o" type="array">
+      <obj_property name="ElementShortName">note_start_address_o[11:0]</obj_property>
+      <obj_property name="ObjectShortName">note_start_address_o[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/inst_ROM_jingle/note_sample_count_o" type="array">
+      <obj_property name="ElementShortName">note_sample_count_o[7:0]</obj_property>
+      <obj_property name="ObjectShortName">note_sample_count_o[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/inst_ROM_jingle/data" type="array">
+      <obj_property name="ElementShortName">data[35:0]</obj_property>
+      <obj_property name="ObjectShortName">data[35:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/inst_ROM_jingle/ROM_cst" type="array">
+      <obj_property name="ElementShortName">ROM_cst[0:2][35:0]</obj_property>
+      <obj_property name="ObjectShortName">ROM_cst[0:2][35:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/clk_i" type="logic">
+      <obj_property name="ElementShortName">clk_i</obj_property>
+      <obj_property name="ObjectShortName">clk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/rst_n_i" type="logic">
+      <obj_property name="ElementShortName">rst_n_i</obj_property>
+      <obj_property name="ObjectShortName">rst_n_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/codec_scl_io" type="logic">
+      <obj_property name="ElementShortName">codec_scl_io</obj_property>
+      <obj_property name="ObjectShortName">codec_scl_io</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/codec_sda_io" type="logic">
+      <obj_property name="ElementShortName">codec_sda_io</obj_property>
+      <obj_property name="ObjectShortName">codec_sda_io</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/codec_mclk_o" type="logic">
+      <obj_property name="ElementShortName">codec_mclk_o</obj_property>
+      <obj_property name="ObjectShortName">codec_mclk_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/codec_adc_sdata_i" type="logic">
+      <obj_property name="ElementShortName">codec_adc_sdata_i</obj_property>
+      <obj_property name="ObjectShortName">codec_adc_sdata_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/codec_bclk_i" type="logic">
+      <obj_property name="ElementShortName">codec_bclk_i</obj_property>
+      <obj_property name="ObjectShortName">codec_bclk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/codec_dac_sdata_o" type="logic">
+      <obj_property name="ElementShortName">codec_dac_sdata_o</obj_property>
+      <obj_property name="ObjectShortName">codec_dac_sdata_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/codec_lrclk_i" type="logic">
+      <obj_property name="ElementShortName">codec_lrclk_i</obj_property>
+      <obj_property name="ObjectShortName">codec_lrclk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/btnd_i" type="logic">
+      <obj_property name="ElementShortName">btnd_i</obj_property>
+      <obj_property name="ObjectShortName">btnd_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/btnu_i" type="logic">
+      <obj_property name="ElementShortName">btnu_i</obj_property>
+      <obj_property name="ObjectShortName">btnu_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/oled_dc_n_o" type="logic">
+      <obj_property name="ElementShortName">oled_dc_n_o</obj_property>
+      <obj_property name="ObjectShortName">oled_dc_n_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/oled_res_n_o" type="logic">
+      <obj_property name="ElementShortName">oled_res_n_o</obj_property>
+      <obj_property name="ObjectShortName">oled_res_n_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/oled_sclk_o" type="logic">
+      <obj_property name="ElementShortName">oled_sclk_o</obj_property>
+      <obj_property name="ObjectShortName">oled_sclk_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/oled_sdo_o" type="logic">
+      <obj_property name="ElementShortName">oled_sdo_o</obj_property>
+      <obj_property name="ObjectShortName">oled_sdo_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/oled_vbat_n_o" type="logic">
+      <obj_property name="ElementShortName">oled_vbat_n_o</obj_property>
+      <obj_property name="ObjectShortName">oled_vbat_n_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/oled_vdd_n_o" type="logic">
+      <obj_property name="ElementShortName">oled_vdd_n_o</obj_property>
+      <obj_property name="ObjectShortName">oled_vdd_n_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/locked" type="logic">
+      <obj_property name="ElementShortName">locked</obj_property>
+      <obj_property name="ObjectShortName">locked</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/rst_sys" type="logic">
+      <obj_property name="ElementShortName">rst_sys</obj_property>
+      <obj_property name="ObjectShortName">rst_sys</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/clk_50mhz" type="logic">
+      <obj_property name="ElementShortName">clk_50mhz</obj_property>
+      <obj_property name="ObjectShortName">clk_50mhz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/clk_45mhz" type="logic">
+      <obj_property name="ElementShortName">clk_45mhz</obj_property>
+      <obj_property name="ObjectShortName">clk_45mhz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/ROM_qsin_addr" type="array">
+      <obj_property name="ElementShortName">ROM_qsin_addr[11:0]</obj_property>
+      <obj_property name="ObjectShortName">ROM_qsin_addr[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/ROM_qsin_sample" type="array">
+      <obj_property name="ElementShortName">ROM_qsin_sample[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ROM_qsin_sample[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/sine_sample" type="array">
+      <obj_property name="ElementShortName">sine_sample[23:0]</obj_property>
+      <obj_property name="ObjectShortName">sine_sample[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/vol_sample" type="array">
+      <obj_property name="ElementShortName">vol_sample[23:0]</obj_property>
+      <obj_property name="ObjectShortName">vol_sample[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/codec_sample_out" type="array">
+      <obj_property name="ElementShortName">codec_sample_out[23:0]</obj_property>
+      <obj_property name="ObjectShortName">codec_sample_out[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/inst_MSA_jingle/current_state" type="other">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/jingle_addr" type="array">
+      <obj_property name="ElementShortName">jingle_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">jingle_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/note_duration" type="array">
+      <obj_property name="ElementShortName">note_duration[15:0]</obj_property>
+      <obj_property name="ObjectShortName">note_duration[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/note_start_address" type="array">
+      <obj_property name="ElementShortName">note_start_address[11:0]</obj_property>
+      <obj_property name="ObjectShortName">note_start_address[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/note_sample_count" type="array">
+      <obj_property name="ElementShortName">note_sample_count[7:0]</obj_property>
+      <obj_property name="ObjectShortName">note_sample_count[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/jingle_timing_start" type="logic">
+      <obj_property name="ElementShortName">jingle_timing_start</obj_property>
+      <obj_property name="ObjectShortName">jingle_timing_start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/jingle_timing_ready" type="logic">
+      <obj_property name="ElementShortName">jingle_timing_ready</obj_property>
+      <obj_property name="ObjectShortName">jingle_timing_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/note_enable" type="logic">
+      <obj_property name="ElementShortName">note_enable</obj_property>
+      <obj_property name="ObjectShortName">note_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/pixel" type="logic">
+      <obj_property name="ElementShortName">pixel</obj_property>
+      <obj_property name="ObjectShortName">pixel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/row" type="array">
+      <obj_property name="ElementShortName">row[4:0]</obj_property>
+      <obj_property name="ObjectShortName">row[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/column" type="array">
+      <obj_property name="ElementShortName">column[6:0]</obj_property>
+      <obj_property name="ObjectShortName">column[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/btnd_ar" type="logic">
+      <obj_property name="ElementShortName">btnd_ar</obj_property>
+      <obj_property name="ObjectShortName">btnd_ar</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/btnu_ar" type="logic">
+      <obj_property name="ElementShortName">btnu_ar</obj_property>
+      <obj_property name="ObjectShortName">btnu_ar</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/start_jingle" type="logic">
+      <obj_property name="ElementShortName">start_jingle</obj_property>
+      <obj_property name="ObjectShortName">start_jingle</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/codec_ready" type="logic">
+      <obj_property name="ElementShortName">codec_ready</obj_property>
+      <obj_property name="ObjectShortName">codec_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/codec_valid" type="logic">
+      <obj_property name="ElementShortName">codec_valid</obj_property>
+      <obj_property name="ObjectShortName">codec_valid</obj_property>
+   </wvobject>
+</wave_config>

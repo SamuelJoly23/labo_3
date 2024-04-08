@@ -14,8 +14,8 @@ end MSA_jingle;
 
 architecture Behavioral of MSA_jingle is
     -- A completer
-    type state is (jingle_on, waiting, delay);
-    signal current_state : state    := waiting;
+    type state is (jingle_on, waiting, delay, standby);
+    signal current_state : state    := standby;
     signal jingle_timing_start      : std_logic;
     signal jingle_addr              : std_logic_vector(7 downto 0);
     signal note_enable              : std_logic;
@@ -38,29 +38,44 @@ begin
         
         elsif rising_edge(clk_i) then
             case current_state is 
-                when waiting =>
-                    if timing_ready_i = '1' and start_jingle_i = '1' then
+                when standby =>
+                    if start_jingle_i = '1' then
                         current_state <= jingle_on;
-                        note_enable <= '1'; -- necessary ?
+                        note_enable <= '0';
+                    end if;
+                
+                when waiting =>
+                    if timing_ready_i = '1' then
+                       if jingle_addr = X"02" then 
+                           jingle_addr <= X"00";
+                           current_state <= standby;
+                           note_enable <= '0';              
+                        else
+                            jingle_addr <= std_logic_vector(to_unsigned(to_integer(unsigned( jingle_addr )) + 1,8));
+                            note_enable <= '1';
+                            current_state <= jingle_on;
+                        end if;
                     end if;
                 
                 when jingle_on =>
-                    if timing_ready_i <= '1' then
-                        current_state <= delay;
-                    elsif timing_ready_i = '0' then
-                        note_enable <= '1';
+--                if jingle_addr = X"03" then 
+--                       jingle_addr <= X"00";
+--                       current_state <= standby;
+--                       note_enable <= '0';
+--                else
                         jingle_timing_start <= '1';
-                    end if;
+                        note_enable <= '0'; -- enable off pour un cycle
+                        current_state <= delay;
+--                end if;
+                 
                     
                 when delay =>
-                    if jingle_addr = X"02" then 
-                        current_state <= waiting;
-                    else 
-                        jingle_addr <= std_logic_vector(to_unsigned(to_integer(unsigned( jingle_addr )) + 1,8));
-                        note_enable <= '0';
-                        jingle_timing_start <= '0';
-                        current_state <= jingle_on;
-                    end if;
+                    jingle_timing_start <= '0';
+                    note_enable <= '1'; -- enable on apres un cycle off
+                    
+                        --jingle_addr <= std_logic_vector(to_unsigned(to_integer(unsigned( jingle_addr )) + 1,8));
+                        --note_enable <= '0';
+                    current_state <= waiting;
             end case;
         end if;
     end process;

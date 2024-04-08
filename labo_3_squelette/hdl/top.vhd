@@ -14,6 +14,7 @@ entity top is
         codec_lrclk_i     : in    std_logic;
         btnd_i            : in    std_logic;
         btnu_i            : in    std_logic;
+        btnr_i            : in    std_logic;
         oled_dc_n_o       : out   std_logic;
         oled_res_n_o      : out   std_logic;
         oled_sclk_o       : out   std_logic;
@@ -139,6 +140,17 @@ architecture Behavioral of top is
       );
   end component;
 
+  component echo
+    port (
+      rst_i : in  std_logic;
+      clk_i : in  std_logic;
+      btnr_i : in  std_logic;
+      echo_sample_in : in std_logic_vector(23 downto 0);
+      echo_sample_out : out std_logic_vector(23 downto 0)
+      );
+  end component;
+
+
   signal locked, rst_sys                          : std_logic;
   signal clk_50mhz, clk_45mhz                     : std_logic;
   signal ROM_qsin_addr                            : std_logic_vector(11 downto 0);
@@ -158,16 +170,27 @@ architecture Behavioral of top is
   signal btnd_ar, btnu_ar                         : std_logic;
   signal start_jingle                             : std_logic;
   signal codec_ready, codec_valid                 : std_logic;
+  signal mux_sample_in                            : std_logic_vector(23 downto 0);
+  signal echo_out                                 : std_logic_vector(23 downto 0);
 
 begin
+--    when sw_0 => '1' 
+--    when sw_0 <= upper else upper;
 
+       --mux_sample_in <= echo_sample_out when btnr_i <= '1' else
+       --mux_sample_in <= echo_sample_out;
+       mux_sample_in <= echo_out when btnr_i = '1' else
+                 sine_sample;
+        --sine_sample;
+         --when sel = '1' else
+--        'X';  -- Handle the case when sel is not '0' or '1'
   inst_modulateur_volume : modulateur_volume
     port map(
       rst_i          => rst_sys,
       clk_i          => clk_50mhz,
-      btnd_i         => btnd_ar,
-      btnu_i         => btnu_ar,
-      sample_in      => sine_sample,
+      btnd_i         => btnd_i,
+      btnu_i         => btnu_i,
+      sample_in      => mux_sample_in,
       sample_out     => vol_sample,
       column_i       => column,
       row_i          => row,
@@ -280,4 +303,12 @@ begin
       btn_o => btnd_ar
       );
       
+  inst_echo : echo
+    port map (
+        clk_i               => clk_50mhz,
+        rst_i               => rst_sys,
+        btnr_i              => btnr_i,
+        echo_sample_in      => vol_sample,
+        echo_sample_out     => echo_out
+    );    
 end Behavioral;
